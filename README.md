@@ -1,12 +1,12 @@
 # LoadingScreenTexture
 
-Mod cliente para Minecraft Java 1.20.1 + Minecraft Forge 47.4.20.
+Mod cliente para Minecraft Java 1.20.1 con Minecraft Forge **47.4.18 o superior**.
 
 El objetivo es permitir que el logo de la pantalla de carga use la textura `assets/minecraft/textures/gui/title/mojangstudios.png` del resource pack activo, sin cambiar el resto de la pantalla.
 
 ## Estado
 
-Proyecto inicial. GitHub Actions compilará el JAR automáticamente. Antes de darlo por terminado, hay que verificar dentro de Minecraft que la textura personalizada se lea correctamente desde el pack activo.
+Proyecto inicial. GitHub Actions compila el JAR automáticamente. Antes de darlo por terminado, hay que verificar dentro de Minecraft que la textura personalizada se lea correctamente desde el pack activo.
 
 ## Compilar y descargar
 
@@ -21,5 +21,5 @@ Si el logo no cambia, adjunta el registro de inicio y la versión exacta de Forg
 ## Compatibilidad prevista
 
 - Minecraft Java 1.20.1
-- Minecraft Forge 47.4.20
+- Minecraft Forge 47.4.18 o superior de la rama compatible con Minecraft 1.20.1
 - Cliente solamente; no requiere instalarse en servidores dedicados.
