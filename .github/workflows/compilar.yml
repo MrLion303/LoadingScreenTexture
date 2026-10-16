@@ -1,0 +1,40 @@
+name: Compilar mod Forge 1.20.1
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+
+      - name: Compilar JAR
+        run: gradle --no-daemon build
+
+      - name: Publicar JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: LoadingScreenTexture-Forge-1.20.1
+          path: build/libs/*.jar
+          if-no-files-found: error
+          retention-days: 14
